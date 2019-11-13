@@ -9,6 +9,10 @@ package modele;
  *
  * @author p1711015
  */
-public class Modele {
+public enum EnumSymbole {
+    A,
+    B,
+    C,
+    D;
     
 }
