@@ -12,12 +12,26 @@ import java.util.ArrayList;
  * @author p1711015
  */
 public class Chemin {
-    ArrayList<Case> cheminCase = new ArrayList<Case>();
+    ArrayList<Case> cheminCase = new ArrayList<>();
     EnumSymbole symboleChemin;
-    
+
     public Chemin(CaseSymbole caseDepart){
-        this.symboleChemin = caseDepart.symbole;
+        symboleChemin = caseDepart.symbole;
         cheminCase.add(caseDepart);
     }
-    
+
+    public void add(Case newcase){
+      cheminCase.add(newcase);
+      if(cheminCase.get(cheminCase.size()-2).getClass()!=CaseSymbole.class){
+        ((CaseChemin)cheminCase.get(cheminCase.size()-2)).calcSens(cheminCase.get(cheminCase.size()-3).posx,cheminCase.get(cheminCase.size()-3).posy, cheminCase.get(cheminCase.size()-1).posx, cheminCase.get(cheminCase.size()-1).posy);
+      }
+    }
+
+    public void clean(){
+      for(Case c:cheminCase){
+        if(c.getClass()==CaseChemin.class){
+          ((CaseChemin)c).sensChemin = null;
+        }
+      }
+    }
 }

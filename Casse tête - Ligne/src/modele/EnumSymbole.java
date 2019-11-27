@@ -10,9 +10,16 @@ package modele;
  * @author p1711015
  */
 public enum EnumSymbole {
-    A,
-    B,
-    C,
-    D;
-    
+  A,
+  B,
+  C,
+  D;
+
+  
+  public static EnumSymbole[] tabVal = values();
+
+  public static EnumSymbole[] getlistSymbole()  {
+    return tabVal;
+}
+
 }

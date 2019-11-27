@@ -12,9 +12,9 @@ package modele;
 public class Case {
    int posx;
    int posy;
-   
+
    public Case(int x,int y){
-       this.posx = x;
-       this.posy = y;
+       posx = x;
+       posy = y;
    }
 }

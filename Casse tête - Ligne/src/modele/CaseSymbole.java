@@ -11,10 +11,10 @@ package modele;
  */
 public class CaseSymbole extends Case{
     EnumSymbole symbole;
-    
+
     public CaseSymbole(int x, int y, EnumSymbole sym){
         super(x,y);
-        this.symbole = sym;
+        symbole = sym;
     }
-    
+
 }
